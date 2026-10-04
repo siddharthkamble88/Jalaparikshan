@@ -1,0 +1,6 @@
+{
+  "name": "JalParikshan",
+  "description": "IoT-Based Real-Time Water Quality Monitoring Platform with live analytics, multi-node tracking, map visualization, and alert engine.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

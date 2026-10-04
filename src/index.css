@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0b1f26;
+  --panel: #102b34;
+  --panel-2: #123540;
+  --line: #1e4652;
+  --text: #e7f2f2;
+  --text-dim: #9fbdc2;
+  --accent: #2fb3a3;
+  --accent-2: #5ad1c9;
+  --safe: #3ecf8e;
+  --warn: #f2b84b;
+  --danger: #f2665e;
+  --temp-color: #f2994a;
+  --ph-color: #5ad1c9;
+  --do-color: #4f8ef7;
+  --turb-color: #c77dff;
+}
+
+@layer base {
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  h1, h2, .font-serif-display {
+    font-family: 'Georgia', 'Times New Roman', serif;
+  }
+  code, kbd, samp, pre, .font-mono {
+    font-family: 'SFMono-Regular', Consolas, 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b1f26;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e4652;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2fb3a3;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Glass card effects */
+.glass-panel {
+  background: #102b34;
+  border: 1px solid #1e4652;
+  border-radius: 0.75rem;
+}
+
+.glass-panel-active {
+  background: #123540;
+  border: 1px solid #5ad1c9;
+  box-shadow: inset 0 0 0 1px #5ad1c9;
+}
+
+.badge-safe {
+  background: rgba(62, 207, 142, 0.15);
+  color: #3ecf8e;
+  border: 1px solid rgba(62, 207, 142, 0.3);
+}
+
+.badge-warn {
+  background: rgba(242, 184, 75, 0.15);
+  color: #f2b84b;
+  border: 1px solid rgba(242, 184, 75, 0.3);
+}
+
+.badge-danger {
+  background: rgba(242, 102, 94, 0.15);
+  color: #f2665e;
+  border: 1px solid rgba(242, 102, 94, 0.3);
+}
+
+.badge-unknown {
+  background: rgba(159, 189, 194, 0.15);
+  color: #9fbdc2;
+  border: 1px solid rgba(159, 189, 194, 0.3);
+}
+
